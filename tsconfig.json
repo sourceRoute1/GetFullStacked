@@ -1,0 +1,25 @@
+{
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ],
+  "compilerOptions": {
+    "moduleResolution": "Node16",
+    "outDir": "./dist",
+    "forceConsistentCasingInFileNames": true,
+    "module": "Node16",
+    "target": "esnext",
+    "types": ["tailwindcss"],
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "baseUrl": ".",
+    "declaration": false,
+    "emitDeclarationOnly": false,
+    "skipLibCheck": true
+  },
+  "include": ["src/**/*.tsx","src/**/*.ts", "tailwind.config.ts"],
+  "exclude": ["node_modules", "dist"]
+}

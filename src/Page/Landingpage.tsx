@@ -158,6 +158,7 @@ export default function LandingPage() {
           >
             👉 Apply for Mentorship
           </a>
+          <br />
           <a
             href="https://calendly.com/testmetry/getfullstacked"
             target="_blank"

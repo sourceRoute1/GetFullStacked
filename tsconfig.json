@@ -5,8 +5,8 @@
     { "path": "./tsconfig.node.json" }
   ],
   "compilerOptions": {
+    "composite": true,
     "moduleResolution": "Node16",
-    "outDir": "./dist",
     "forceConsistentCasingInFileNames": true,
     "module": "Node16",
     "target": "esnext",
@@ -16,10 +16,9 @@
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "baseUrl": ".",
-    "declaration": false,
-    "emitDeclarationOnly": false,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "noEmit": true
   },
-  "include": ["src/**/*.tsx","src/**/*.ts", "tailwind.config.ts"],
+  "include": ["src"],
   "exclude": ["node_modules", "dist"]
 }

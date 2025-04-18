@@ -1,4 +1,9 @@
 import { motion } from "framer-motion";
+import Cyril from "../assets/cyril.png";
+import Evelyn from "../assets/eveIvy.png";
+import Zeb from "../assets/zeb.png";
+import Precious from "../assets/precious.png";
+import David from "../assets/david.png";
 
 export const testimonials = [
   {
@@ -12,40 +17,35 @@ export const testimonials = [
   {
     name: "Evelyn Isaac",
     role: "Frontend (Web/Mobile) Developer, Cinfores Limited",
-    image:
-      "https://lh4.googleusercontent.com/av0_b9ZlG07ZtUQZThaJBBjM5yJ0fxc3lYMH-wwmGc-liwLX6VZVUtm3QBQkVNx4yWkjXDM4x9lYOySXJ6FE8r6eECulHbxQ8RInzz-CU-yskxtmCvyV7FinW9-YyqkYUQ=w1280",
+    image: Evelyn,
     message:
       "Before joining the Masterclass, I barely knew JavaScript. The training gave me a strong foundation, introduced core concepts, and made learning fun. If you’re serious about JavaScript, this is where to start!",
   },
   {
     name: "John Abasiono Cyril",
     role: "System and Application Analyst, Gigasec Services Limited",
-    image:
-      "https://lh4.googleusercontent.com/giYQdT4pNWuPCGM1vruPoyvp6c1_VsMZ4xI6RpgIWwJqDscWAGZLYyyAFdR-UzzVpobLO7IDaZuAWXoad3Neb2m6wLlsCyzpz0-WaVaC2UEHd-oy9y3EEzeW0mIOHVmt1g=w1280",
+    image: Cyril,
     message:
       "Thanks to SourceRoute’s mentorship, I gained solid programming fundamentals and a passion for coding. Their thorough explanations and real-world examples helped me become confident and creative with JavaScript. Highly recommended!",
   },
   {
     name: "Diepiriye Zeb-Obipi",
     role: "Web Developer",
-    image:
-      "https://lh5.googleusercontent.com/eAYnbq8B0zcqpUYfTqQOHGBytExNO90pml45H6mHykinEnTL1vanMHJuEFaW7o3cZmP4vZJxpiyW7hfa4ETn-CyAlIbOONLtcWtCZ06Cce8TKs72wnS3p6Mg1MWh2Rg7mQ=w1280",
+    image: Zeb,
     message:
       "Learning with SourceRoute was hands-on and practical. You build while learning, which helped me grasp things faster than just reading docs. It’s one of the best learning experiences I’ve had!",
   },
   {
     name: "Precious Worukwo",
     role: "MERN Developer",
-    image:
-      "https://lh6.googleusercontent.com/Duolrx7JEzAJpFxavFh_B2LbErjQpBZrhqkMBBr1GjVprELl9jtU94IjCtHRDncCLSnmp3lcN29-mhK7D0vtlCjPkjnECp9MNHpeNjVSZcmsuM7irKH6yuyP7A91cvtG3A=w1280",
+    image: Precious,
     message:
       "The Masterclass transformed my skills! The structured curriculum, practical projects, and expert teaching helped me grow fast. Whether beginner or advanced, SourceRoute will definitely take you to the next level.",
   },
   {
     name: "David Chukunda",
     role: "Frontend Developer, Cinfores Limited",
-    image:
-      "https://lh3.googleusercontent.com/yLCgqGSBWUKdnQhcVemYI71cAkUmNuy7mb6pIRqS8Wyax1RxHdqnhkjPAY_iw3_PN0J0B2RTNPjxF0sPbpevCtIkcQX0y5y6ttc2zCLr61pzdsNrzBl5xJePsLv_hkUKpw=w1280",
+    image: David,
     message:
       "The JavaScript mentorship helped me conquer my fear of coding. His clear teaching style and well-structured materials made learning easy and enjoyable. I now feel confident and excited about coding. Thank you!",
   },

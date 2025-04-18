@@ -8,7 +8,7 @@
     "skipLibCheck": true,
     "composite": true,
     "declaration": true,
-    "noEmit": false,
+    "noEmit": true,
 
     "moduleResolution": "bundler",
     "isolatedModules": true,

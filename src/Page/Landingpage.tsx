@@ -17,7 +17,7 @@ import {
   HelpCircle,
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import logo from "../assets/GFS.png";
+import logo from "../assets/gfs_favicon.png";
 import heroImg from "../assets/herosection.png";
 import FAQ from "../Components/FAQ";
 import { Testimonials } from "../Components/Testimonials";
@@ -43,6 +43,7 @@ const scrollToSection = (id: string) => {
 
 export default function LandingPage() {
   const [open, setOpen] = useState(false);
+  const [showOptions, setShowOptions] = useState(false);
 
   return (
     <div className="font-inter text-white min-h-screen bg-gradient-to-br from-[#0A1D56] via-[#0C356A] to-[#000000]">
@@ -53,12 +54,21 @@ export default function LandingPage() {
           onClick={() => scrollToSection("hero-section")}
           className="flex items-center gap-2 flex-shrink-0 cursor-pointer"
         >
-          <img src={logo} alt="Logo Icon" className="h-8 w-8 object-contain" />
-          <h1 className="text-xl font-bold">
-            <span className="text-[#41B0FF]">Get</span>
-            <span className="text-white">FullStack</span>
-            <span className="text-[#41B0FF]">ed</span>
-          </h1>
+          <img
+            src={logo}
+            alt="Logo Icon"
+            className="h-8 w-8 object-contain self-start mt-[2px]"
+          />
+          <div className="relative flex flex-col justify-center leading-tight">
+            <h1 className="text-[1.1rem] md:text-xl font-bold">
+              <span className="text-[#41B0FF]">Get</span>
+              <span className="text-white">FullStack</span>
+              <span className="text-[#41B0FF]">ed</span>
+            </h1>
+            <span className="absolute right-0 top-full text-[8px] md:text-[10px] text-gray-400">
+              by SourceRoute
+            </span>
+          </div>
         </div>
         {/* Center Navlinks */}
         <div className="hidden md:flex gap-6 items-center mx-auto">
@@ -147,6 +157,14 @@ export default function LandingPage() {
             className="mt-6 inline-flex px-8 py-3 bg-[#41B0FF] text-black text-lg rounded-lg hover:bg-[#3295E6] transition items-center gap-2 cursor-pointer"
           >
             👉 Apply for Mentorship
+          </a>
+          <a
+            href="https://calendly.com/testmetry/getfullstacked"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-4 inline-flex px-6 py-2 border border-[#41B0FF] text-[#41B0FF] text-md rounded-lg hover:bg-[#41B0FF]/10 transition items-center gap-2 cursor-pointer]"
+          >
+            🎙️ Book a Clarity Call
           </a>
         </div>
       </section>
@@ -357,12 +375,33 @@ export default function LandingPage() {
               </span>
             </p>
 
-            <a
-              href="#register"
-              className="inline-block px-8 py-4 bg-[#41B0FF] text-[#0A1D56] font-semibold rounded-2xl shadow-md hover:bg-[#66c3ff] transition duration-300"
-            >
-              👉 Apply Now
-            </a>
+            {!showOptions ? (
+              <button
+                onClick={() => setShowOptions(true)}
+                className="px-6 py-3 bg-[#41B0FF] text-[#0A1D56] font-semibold text-lg rounded-2xl shadow-md hover:bg-[#66c3ff] transition duration-300"
+              >
+                👉 Apply Now
+              </button>
+            ) : (
+              <div className="flex flex-col md:flex-row gap-4 justify-center mt-6">
+                <a
+                  href="https://pay.squadco.com/link/232YAG"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-6 py-3 bg-[#41B0FF] text-[#0A1D56] font-semibold rounded-xl shadow hover:bg-[#66c3ff] transition"
+                >
+                  💳 Full Payment – ₦85,000
+                </a>
+                <a
+                  href="https://pay.squadco.com/KFWVBN"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-6 py-3 border border-[#41B0FF] text-[#41B0FF] font-semibold rounded-xl shadow hover:bg-[#41B0FF]/10 transition"
+                >
+                  🧾 Installment – ₦50,000
+                </a>
+              </div>
+            )}
           </div>
         </section>
 
@@ -371,8 +410,21 @@ export default function LandingPage() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-black py-6 text-center text-gray-500 text-sm">
-        © {new Date().getFullYear()} GetFullStacked. All rights reserved.
+      <footer className="bg-black py-6 text-center text-gray-500 text-sm space-y-1">
+        <div>
+          © {new Date().getFullYear()} GetFullStacked. All rights reserved.
+        </div>
+        <div>
+          Developed by{" "}
+          <a
+            href="https://github.com/Edward-Ijeruh"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#41B0FF] hover:underline"
+          >
+            Edward Ijeruh
+          </a>
+        </div>
       </footer>
     </div>
   );

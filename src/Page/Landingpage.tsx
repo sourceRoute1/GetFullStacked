@@ -48,7 +48,7 @@ export default function LandingPage() {
   return (
     <div className="font-inter text-white min-h-screen bg-gradient-to-br from-[#0A1D56] via-[#0C356A] to-[#000000]">
       {/* Navbar */}
-      <nav className="sticky top-0 left-0 w-full z-50 px-6 py-4 flex items-center justify-between backdrop-blur-md bg-black/60 shadow-md">
+      <nav className="sticky top-0 left-0 w-full z-50 px-6 py-4 flex items-center justify-between backdrop-blur-md bg-black/50 shadow-md">
         {/* Logo */}
         <div
           onClick={() => scrollToSection("hero-section")}
@@ -379,7 +379,7 @@ export default function LandingPage() {
             {!showOptions ? (
               <button
                 onClick={() => setShowOptions(true)}
-                className="px-6 py-3 bg-[#41B0FF] text-[#0A1D56] font-semibold text-lg rounded-2xl shadow-md hover:bg-[#66c3ff] transition duration-300"
+                className="px-6 py-3 bg-[#41B0FF] text-[#0A1D56] font-semibold text-lg rounded-2xl shadow-md hover:bg-[#66c3ff] transition duration-300 cursor-pointer"
               >
                 👉 Apply Now
               </button>

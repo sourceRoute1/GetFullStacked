@@ -34,13 +34,3 @@ jobs:
           #   server-dir: ${{ secrets.FTP_TARGET_DIR }}
           local-dir: ./dist/
           dangerous-clean-slate: true
-
-        #   ssh $SERVER_USER@$SERVER_HOST -p $SERVER_PORT  << EOF
-        #     echo "Connected to Server Successfully"
-        #     echo $DEPLOY_PATH
-        #     source $NODE_PATH
-        #     cd $DEPLOY_PATH || exit 1
-        #     npm install --omit=dev
-        #     # npm run start
-        #     pm2 restart all || pm2 start npm --name "billkit" -- run start
-        #   EOF

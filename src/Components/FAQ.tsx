@@ -25,7 +25,7 @@ const FAQ = () => {
     {
       question: "Is there a refund?",
       answer:
-        "Because this is a mentorship with limited slots and personalized time, there are no refunds. Only apply if you’re ready to commit and do the work.",
+        "Because this is a mentorship with limited slots and personalized time, there are no refunds. Only apply if you're ready to commit and do the work.",
     },
     {
       question: "Can I pay in two parts?",

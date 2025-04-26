@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Menu, X, Lightbulb, Rocket, MessageSquareQuote, FileText, Map, Calendar, Code, MessageCircle, Briefcase, Users, Book, CheckCircle, HelpCircle, Calendar1Icon, CalendarClock } from "lucide-react";
+import { Menu, X, Lightbulb, Rocket, MessageSquareQuote, FileText, Map, Calendar, Code, MessageCircle, Briefcase, Users, Book, CheckCircle, HelpCircle, CalendarClock } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import logo from "../assets/gfs_favicon.png";
 import heroImg from "../assets/herosection.png";

@@ -32,7 +32,7 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           #   server-dir: ${{ secrets.FTP_TARGET_DIR }}
-          local-dir: ./dist
+          local-dir: ./dist/
           dangerous-clean-slate: true
 
         #   ssh $SERVER_USER@$SERVER_HOST -p $SERVER_PORT  << EOF

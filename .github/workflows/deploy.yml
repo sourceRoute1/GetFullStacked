@@ -25,29 +25,15 @@ jobs:
       - name: Build app
         run: npm run build
 
-      - name: Deploy via SSH
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-          SERVER_USER: ${{ secrets.USER }}
-          SERVER_HOST: ${{ secrets.HOST }}
-          SERVER_PORT: ${{ secrets.PORT }}
-          DEPLOY_PATH: ${{ secrets.DEPLOY_PATH }}
-        run: |
-          eval "$(ssh-agent -s)"
-          echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
-          mkdir -p ~/.ssh
-          # echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
-          chmod 700 ~/.ssh
-          # chmod 600 ~/.ssh/id_rsa
-
-          # Add the server's SSH key to known_hosts (avoiding "Host key verification failed")
-          ssh-keyscan -H -p $SERVER_PORT $SERVER_HOST >> ~/.ssh/known_hosts
-
-          # echo "Testing SSH Connection..."
-          # ssh -v -p $SERVER_PORT $SERVER_USER@$SERVER_HOST "echo 'SSH Connection Successful'"
-
-          echo "Starting Rsync..."
-          rsync -avz -e "ssh -p $SERVER_PORT" --exclude='node_modules' --exclude='.git' ./dist $SERVER_USER@$SERVER_HOST:$DEPLOY_PATH
+      - name: Sync files
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          #   server-dir: ${{ secrets.FTP_TARGET_DIR }}
+          local-dir: ./dist
+          dangerous-clean-slate: true
 
         #   ssh $SERVER_USER@$SERVER_HOST -p $SERVER_PORT  << EOF
         #     echo "Connected to Server Successfully"

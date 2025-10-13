@@ -33,5 +33,5 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           server-dir: ${{ secrets.FTP_SERVER_DIR }}
           local-dir: ./out/
-          protocoL: ftp
+          protocol: ftp
           dangerous-clean-slate: true

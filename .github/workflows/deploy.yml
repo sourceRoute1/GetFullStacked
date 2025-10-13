@@ -34,5 +34,5 @@ jobs:
           port: ${{ secrets.FTP_PORT }}
           server-dir: ${{ secrets.FTP_SERVER_DIR }}
           local-dir: ./out/
-          protocol: ftp
+          protocol: sftp
           dangerous-clean-slate: true

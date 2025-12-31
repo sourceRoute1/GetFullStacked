@@ -4,39 +4,39 @@ import { CheckCircle2 } from "lucide-react";
 
 const curriculum = [
   {
-    weeks: "Week 1–2",
+    weeks: "Week 1-2",
     title: "HTML, CSS, JS fundamentals",
     description: "Master the building blocks of web development with semantic HTML, modern CSS layouts, and JavaScript ES6+ features.",
     project: "Responsive landing page",
   },
   {
-    weeks: "Week 3–4",
+    weeks: "Week 3-4",
     title: "React + APIs",
     description: "Learn component-based architecture, hooks, state management, and how to fetch and display data from external APIs.",
     project: "Movie finder app",
   },
   {
-    weeks: "Week 5–6",
+    weeks: "Week 5-6",
     title: "Node.js + Express",
     description: "Build scalable server-side applications with Node.js runtime and Express framework, including routing and middleware.",
-    project: "REST API backend",
+    project: "Kanban board (task manager)",
   },
   {
-    weeks: "Week 7–8",
+    weeks: "Week 7-8",
     title: "SQL, MongoDB + Auth",
     description: "Master relational databases with SQL queries, work with NoSQL databases, and implement secure authentication with JWT tokens.",
-    project: "Task manager with database",
+    project: "Food ordering app",
   },
   {
-    weeks: "Week 9–10",
+    weeks: "Week 9-10",
     title: "Advanced Topics",
-    description: "Explore WebSockets for real-time communication, state management patterns, and performance optimization techniques.",
-    project: "Food ordering app", // Updated project
+    description: "Explore SSE and WebSockets for real-time communication, and using AI as an assistant",
+    project: "Mini social media app", // Updated project
   },
   {
-    weeks: "Week 11–12",
+    weeks: "Week 11-12",
     title: "Capstone",
-    description: "Design, build, and deploy your own fullstack application from scratch, applying everything you've learned.",
+    description: "Design, build, and deploy your own fullstack application from scratch, applying everything you've learnt.",
     project: "Deploy fullstack project",
   },
 ];

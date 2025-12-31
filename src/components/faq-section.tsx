@@ -16,7 +16,7 @@ const faqs = [
   },
   {
     question: "What happens after the course?",
-    answer: "After completing the program, you'll have a portfolio of real projects, lifetime access to course materials, and continued access to our community. We also provide job search support and career guidance.",
+    answer: "After completing the program, you'll have a portfolio of real projects, continued access to our community. We also provide career guidance.",
   },
 ];
 

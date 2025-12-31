@@ -5,41 +5,26 @@ import { Code2, Sparkles } from "lucide-react";
 export function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-4 py-20 pt-16">
-      {/* Background code pattern */}
-      <div className="absolute inset-0 opacity-[0.03]">
-        <pre className="text-xs font-mono text-primary leading-relaxed">
-          {`const developer = {
-  skills: ['React', 'Node.js', 'MongoDB'],
-  projects: ['Portfolio', 'API', 'Chat App'],
-  status: 'building'
-};
-
-function buildFuture() {
-  return learn() + practice() + deploy();
-}`}
-        </pre>
-      </div>
-
       <motion.div
-        className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl"
+        className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl"
         animate={{
-          scale: [1, 1.2, 1],
-          opacity: [0.3, 0.5, 0.3],
+          scale: [1, 1.3, 1],
+          opacity: [0.3, 0.6, 0.3],
         }}
         transition={{
-          duration: 8,
+          duration: 5,
           repeat: Number.POSITIVE_INFINITY,
           ease: "easeInOut",
         }}
       />
       <motion.div
-        className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent/10 rounded-full blur-3xl"
+        className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent/20 rounded-full blur-3xl"
         animate={{
-          scale: [1.2, 1, 1.2],
-          opacity: [0.5, 0.3, 0.5],
+          scale: [1.3, 1, 1.3],
+          opacity: [0.6, 0.3, 0.6],
         }}
         transition={{
-          duration: 8,
+          duration: 5,
           repeat: Number.POSITIVE_INFINITY,
           ease: "easeInOut",
         }}

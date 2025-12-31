@@ -19,7 +19,7 @@ export function PricingSection() {
                 Limited spots available
               </motion.div>
               <div className="text-5xl md:text-6xl font-bold mb-2">
-                ₦150,000
+                ₦180,000
                 <span className="text-2xl text-muted-foreground font-normal">/cohort</span>
               </div>
               <p className="text-muted-foreground">One-time payment for the full program</p>
@@ -32,7 +32,7 @@ export function PricingSection() {
                   <div className="font-semibold">Duration</div>
                   <div className="text-sm text-muted-foreground">
                     12 weeks intensive program. <br />
-                    2x live classes in a week <br />
+                    3x live classes in a week <br />
                   </div>
                 </div>
               </motion.div>
@@ -40,7 +40,7 @@ export function PricingSection() {
                 <Calendar className="w-5 h-5 text-primary flex-shrink-0" />
                 <div>
                   <div className="font-semibold">Next Cohort</div>
-                  <div className="text-sm text-muted-foreground">Starting March 15, 2025</div>
+                  <div className="text-sm text-muted-foreground">Starting February 9, 2026</div>
                 </div>
               </motion.div>
               <motion.div className="flex items-center gap-3 p-4 rounded-lg bg-secondary/50 hover:bg-secondary transition-colors cursor-default" whileHover={{ x: 4 }}>
@@ -55,7 +55,7 @@ export function PricingSection() {
             <div className="flex flex-col sm:flex-row gap-4">
               <motion.div className="flex-1" whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
                 <Button size="lg" className="w-full bg-primary text-primary-foreground hover:bg-primary/90 text-lg py-6 rounded-full font-semibold shadow-lg hover:shadow-primary/30 transition-all" asChild>
-                  <a href="#" target="_blank" rel="noopener noreferrer">
+                  <a href="https://pay.squadco.com/232YAG" target="_blank" rel="noopener noreferrer">
                     Join the Next Cohort
                   </a>
                 </Button>

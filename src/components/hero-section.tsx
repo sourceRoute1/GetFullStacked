@@ -35,7 +35,9 @@ export function HeroSection() {
           <motion.div animate={{ rotate: [0, 15, -15, 0] }} transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}>
             <Sparkles className="w-4 h-4 text-primary" />
           </motion.div>
-          <span className="text-sm text-muted-foreground">Next cohort starts soon</span>
+          <span className="text-sm text-muted-foreground">
+            Next cohort starts <strong className="text-primary">Feb. 9th, 2026</strong>
+          </span>
         </motion.div>
 
         <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }} className="text-5xl md:text-7xl font-bold mb-6 text-balance">

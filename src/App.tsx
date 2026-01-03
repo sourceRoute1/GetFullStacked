@@ -1,7 +1,7 @@
 import { HeroSection } from "@/components/hero-section";
 import { MethodSection } from "@/components/method-section";
 import { CurriculumSection } from "@/components/curriculum-section";
-// import { ProjectsSection } from "@/components/projects-section";
+import { TestimonialSection } from "@/components/testimonial-section";
 import { AudienceSection } from "@/components/audience-section";
 import { PricingSection } from "@/components/pricing-section";
 import { FAQSection } from "@/components/faq-section";
@@ -22,9 +22,9 @@ export default function App() {
       <div id="curriculum">
         <CurriculumSection />
       </div>
-      {/* <div id="projects">
-        <ProjectsSection />
-      </div> */}
+      <div id="projects">
+        <TestimonialSection />
+      </div>
       <div id="audience">
         <AudienceSection />
       </div>

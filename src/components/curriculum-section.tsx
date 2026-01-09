@@ -5,39 +5,45 @@ import { CheckCircle2 } from "lucide-react";
 const curriculum = [
   {
     weeks: "Week 1-2",
-    title: "HTML, CSS, JS fundamentals",
-    description: "Master the building blocks of web development with semantic HTML, modern CSS layouts, and JavaScript ES6+ features.",
-    project: "Responsive landing page",
+    title: "Web Foundations: Build Interfaces That Don't Break",
+    goal: "Master the building blocks of web development with semantic HTML, modern CSS layouts,  and JavaScript ES6+ features.",
+    description: ["Semantic HTML for accessibility and structure", "Modern CSS (Flexbox, Grid, responsive design)", "JavaScript (ES6+) for behavior and interaction", "How browsers render and handle user input", "Common layout and responsiveness mistakes—and how to avoid them"],
+    project: "Product Waitlist Landing Page",
   },
   {
     weeks: "Week 3-4",
-    title: "React + APIs",
-    description: "Learn component-based architecture, hooks, state management, and how to fetch and display data from external APIs.",
-    project: "Movie finder app",
+    title: "Frontend Engineering with React: Build Data-Driven UIs",
+    goal: "Learn component-based architecture, hooks, state management, and how to fetch and display data from external APIs",
+    description: ["Component-based architecture", "React hooks (state, effects, custom hooks)", "API consumption and async data handling", "Loading, error, and empty states", "Performance basics and rendering behavior", "Environment variables and configuration"],
+    project: "Search-Based Movie Discovery App",
   },
   {
     weeks: "Week 5-6",
-    title: "Node.js + Express",
-    description: "Build scalable server-side applications with Node.js runtime and Express framework, including routing and middleware.",
-    project: "Kanban board (task manager)",
+    title: "Backend Development with Node.js & Express: Build Reliable APIs",
+    goal: "Build server-side applications with Node.js runtime and Express framework.",
+    description: ["Node.js runtime fundamentals", "Express routing and middleware", "Request/response lifecycle", "Data validation and error handling", "Pagination, filtering, and API structure", "Designing APIs for frontend consumption"],
+    project: "Kanban Task Management API",
   },
   {
     weeks: "Week 7-8",
-    title: "SQL, MongoDB + Auth",
-    description: "Master relational databases with SQL queries, work with NoSQL databases, and implement secure authentication with JWT tokens.",
+    title: "Data & Authentication: Build Systems People Trust",
+    goal: "Master relational databases with SQL queries, work with NoSQL databases, and implement secure authentication",
+    description: ["Relational databases with SQL", "NoSQL databases with MongoDB", "Data modeling and schema decisions", "Secure authentication with JWT", "Authorization and access control", "Common security mistakes and best practices"],
     project: "Food ordering app",
   },
   {
     weeks: "Week 9-10",
-    title: "Advanced Topics",
-    description: "Explore SSE and WebSockets for real-time communication, and using AI as an assistant",
+    title: "Real-Time Communication: Go Beyond Request & Response",
+    goal: "Build features that update instantly and scale responsibly",
+    description: ["Server-Sent Events (SSE)", "WebSockets fundamentals", "Real-time architecture trade-offs", "Connection lifecycle and failure handling", "When real-time is necessary—and when it's not"],
     project: "Mini social media app", // Updated project
   },
   {
     weeks: "Week 11-12",
     title: "Capstone",
-    description: "Design, build, and deploy your own fullstack application from scratch, applying everything you've learnt.",
-    project: "Deploy fullstack project",
+    goal: "Design, build, and deploy your own complete product from scratch, applying everything you've learnt.",
+    description: ["Design, build, deploy, and submit a production-ready application."],
+    project: "End-to-End Fullstack Application",
   },
 ];
 
@@ -63,7 +69,7 @@ export function CurriculumSection() {
           {curriculum.map((item, index) => (
             <motion.div key={item.weeks} initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: index * 0.1 }}>
               <Card className="p-6 bg-card/50 backdrop-blur-sm border-border hover:border-primary/50 transition-all">
-                <div className="flex flex-col md:flex-row md:items-center gap-4">
+                <div className="flex flex-col md:flex-row md:items-start gap-4">
                   <div className="flex items-center gap-4 flex-1">
                     <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
                       <CheckCircle2 className="w-6 h-6 text-primary" />
@@ -71,7 +77,6 @@ export function CurriculumSection() {
                     <div className="flex-1">
                       <div className="text-sm text-primary font-mono mb-1">{item.weeks}</div>
                       <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-                      <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
                     </div>
                   </div>
                   <div className="md:text-right">
@@ -80,6 +85,23 @@ export function CurriculumSection() {
                       {item.project}
                     </div>
                   </div>
+                </div>
+                <div>
+                  <details className="group w-full">
+                    <summary className="list-none flex items-start justify-between w-full cursor-pointer">
+                      <p className="text-md text-muted-foreground leading-relaxed mb-4 group-hover:text-primary">{item.goal}</p>
+                      <svg className="w-4 h-4 text-primary transition-transform duration-300 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </summary>
+                    <ul className="flex flex-col gap-2 text-sm">
+                      {item.description.map((listItem) => (
+                        <li key={listItem} className="list-disc ms-10">
+                          {listItem}
+                        </li>
+                      ))}
+                    </ul>
+                  </details>
                 </div>
               </Card>
             </motion.div>
